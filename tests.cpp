@@ -7,17 +7,21 @@
 TEST(wrapAddFunctionTest, NonWrappingNums) { 
     ASSERT_EQ(9, wrapFunctionAdd(3,6));
 }
- 
+
+/* Return -1: error, wrapped detected */
 TEST(wrapAddFunctionTest, WrappingNums) {
-    ASSERT_EQ(0, wrapFunctionAdd(UINT_MAX,1));
+    //ASSERT_EQ(0, wrapFunctionAdd(UINT_MAX,1));
+    ASSERT_EQ(-1, wrapFunctionAdd(UINT_MAX,1));
 }
 
 TEST(wrapMulFunctionTest, NonWrappingMulNums) { 
     ASSERT_EQ(18, wrapFunctionMul(3,6));
 }
- 
+
+/* Return -1: error, wrapped detected */
 TEST(wrapMulFunctionTest, WrappingMulNums) {
-    ASSERT_EQ(1, wrapFunctionMul(UINT_MAX, UINT_MAX));
+    //ASSERT_EQ(1, wrapFunctionMul(UINT_MAX, UINT_MAX));
+    ASSERT_EQ(-1, wrapFunctionMul(UINT_MAX, UINT_MAX));
 }
 
 TEST(wrapShiftFunctionTest, NonWrappingMulBNums) { 
