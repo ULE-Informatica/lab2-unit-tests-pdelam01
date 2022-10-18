@@ -42,4 +42,5 @@ TEST(wrapMulFunctionTest, WrappingMulNums) {
 }
 ```
 Finalmente, obtenemos los siguientes resultados:
-![Tests passed](/imgs/testsOK "Tests passed")
+
+![Tests passed](imgs/testsOK.png "Tests passed")
